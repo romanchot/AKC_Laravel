@@ -13,3 +13,16 @@ Requisites:
     php artisan ui vue --auth
     npm install
     npm run dev
+
+
+To Do List:
+Work properly, bugless Code must be clean and readable. Y
+Readme.md with clear installation notes Y
+Stored in a Git repository  Y
+DocBlock / DocComment on every function written
+Good looking and Clean code Y
+Bootstrap, Material    Y
+Passing tests          Y
+Docker setup           N
+Migrations             Y
+Use of Vue or React    Y
