@@ -34,7 +34,7 @@ Readme.md with clear installation notes Y
 
 Stored in a Git repository  Y
 
-DocBlock / DocComment on every function written
+DocBlock / DocComment on every function written Y
 
 Good looking and Clean code Y
 
