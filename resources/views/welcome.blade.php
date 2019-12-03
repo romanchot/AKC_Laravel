@@ -5,17 +5,12 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
         <title>Laravel</title>
-        <style>
-          #map {
-            height: 60%;
-            width: 80%;
-            margin-left: 10%
-          }
-        </style>
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -24,6 +19,14 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            .marginWeb {
+              margin-left: 10%
+            }
+            #map {
+              height: 60%;
+              width: 80%;
             }
 
             .full-height {
@@ -85,35 +88,38 @@
                 </div>
             @endif
         </div>
-        <h1 style="margin-left:10%;">Welcome</h1>
-        <div id="map"></div>
+        <div class="marginWeb ow justify-content-center">
+          <h1 class="">Welcome</h1>
+        </div>
+        <div class="marginWeb" id="map"></div>
         <br><br>
-        <div class="flex-center">
-
-          @if(count($services))
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Title</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Address</th>
-                  <th scope="col">ZipCode</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach($services as $serv)
+        <div class="marginWeb ow justify-content-center">
+          <div class="col-md-10">
+            @if(count($services))
+              <table class="table table-striped">
+                <thead>
                   <tr>
-                    <td>{{ $serv->title }}</td>
-                    <td>{{ $serv->description }}</td>
-                    <td>{{ $serv->address }}</td>
-                    <td>{{ $serv->zipCode }}</td>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">ZipCode</th>
                   </tr>
-                @endforeach
-              </tbody>
-            </table>
-          @else
-            {{ __('No services registered!!!') }}
-          @endif
+                </thead>
+                <tbody>
+                  @foreach($services as $serv)
+                    <tr>
+                      <td>{{ $serv->title }}</td>
+                      <td>{{ $serv->description }}</td>
+                      <td>{{ $serv->address }}</td>
+                      <td>{{ $serv->zipCode }}</td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            @else
+              {{ __('No services registered!!!') }}
+            @endif
+          </div>
         </div>
         <script>
           // Note: This example requires that you consent to location sharing when
