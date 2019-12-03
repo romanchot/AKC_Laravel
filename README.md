@@ -28,7 +28,7 @@ Requisites:
 
     npm run dev
 
-  Dockecr
+  Dockecr => https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
     sudo apt-get install \
     apt-transport-https \

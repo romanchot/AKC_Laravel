@@ -7,9 +7,9 @@ services:
       dockerfile: container-build/web/Dockerfile
     environment:
     - MYSQL_DATABASE=dbname
-    - MYSQL_USER=dbuser
-    - MYSQL_PASSWORD=654321
-    - MYSQL_HOST=db
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=Lola-29102019
+    - MYSQL_HOST=AKC_project
     ports:
     - "8080:80"
     volumes:
@@ -22,13 +22,13 @@ services:
     ports:
     - "6603:3306"
     environment:
-    - MYSQL_ROOT_PASSWORD=654321
-    - MYSQL_USER=dbuser
-    - MYSQL_PASSWORD=654321
-    - MYSQL_DATABASE=dbname
+    - MYSQL_ROOT_PASSWORD=Lola-29102019
+    - MYSQL_USER=root
+    - MYSQL_PASSWORD=Lola-29102019
+    - MYSQL_DATABASE=AKC_project
     volumes:
     - "mysql_data:/var/lib/mysql"
-    - ./data/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
 
 volumes:
   mysql_data: { driver: local }
