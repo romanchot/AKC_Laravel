@@ -87,6 +87,34 @@
         </div>
         <h1 style="margin-left:10%;">Welcome</h1>
         <div id="map"></div>
+        <br><br>
+        <div class="flex-center">
+
+          @if(count($services))
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">ZipCode</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach($services as $serv)
+                  <tr>
+                    <td>{{ $serv->title }}</td>
+                    <td>{{ $serv->description }}</td>
+                    <td>{{ $serv->address }}</td>
+                    <td>{{ $serv->zipCode }}</td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+          @else
+            {{ __('No services registered!!!') }}
+          @endif
+        </div>
         <script>
           // Note: This example requires that you consent to location sharing when
           // prompted by your browser. If you see the error "The Geolocation service

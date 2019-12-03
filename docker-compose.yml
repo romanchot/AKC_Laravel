@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: container-build/web/Dockerfile
     environment:
-    - MYSQL_DATABASE=dbname
+    - MYSQL_DATABASE=AKC_project
     - MYSQL_USER=root
     - MYSQL_PASSWORD=Lola-29102019
     - MYSQL_HOST=AKC_project

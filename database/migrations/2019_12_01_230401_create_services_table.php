@@ -21,8 +21,8 @@ class CreateServicesTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('zipCode');
-            $table->decimal('geoLocLatitude', 18, 15);
-            $table->decimal('geoLocLongitude', 18, 15);
+            $table->double('geoLocLatitude');
+            $table->double('geoLocLongitude');
             $table->timestamps();
         });
     }

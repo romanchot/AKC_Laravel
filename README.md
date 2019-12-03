@@ -1,3 +1,5 @@
+Note: I started this project with Ubuntu because Docker in Windows works with Home or Enterprise Editions and I have Windows Home (I installed Docker toolbox but I did not like it. So I prefer to work Ubuntu).
+
 AKC project
 
 Laravel Project and GoogleMaps JS API
@@ -6,27 +8,35 @@ Requisites:
 
   LAMP = PHP 7.2.24, MySQL Distrib 5.7.28
 
+  Git version 2.17.1
+
   Composer version 1.9.1
 
     Suggestion: chmod +x /usr/local/bin/composer
 
   Laravel Framework 6.6.0
 
-    composer create-project --prefer-dist laravel/laravel nameProject
+    composer create-project --prefer-dist laravel/laravel AKC_project
 
     sudo chown -R www-data:www-data bootstrap/ storage/ => this action can get problems in your local environment, so you need to give them permissions to write too.
 
     sudo chmod 777  bootstrap/ storage/ -R => I do not remember what permission I need, so I just put 777 Open. Just for this project.
 
-  npm
+    npm
 
-    composer require laravel/ui --dev
+      composer require laravel/ui --dev
 
-    php artisan ui vue --auth
+      php artisan ui vue --auth
 
-    npm install
+      npm install
 
-    npm run dev
+      npm run dev
+
+    php artisan make:model Service -m
+
+    php artisan make:controller ServicesController
+
+    php artisan make:controller websiteController
 
   Dockecr => https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
@@ -47,6 +57,8 @@ Requisites:
      stable"
 
     sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+    sudo apt-get install docker-compose
 
     sudo docker run hello-world => to test
 
@@ -70,6 +82,12 @@ Requisites:
 
       https://github.com/Beachcasts/doctrine-expressive-example/blob/master/container-build/web/Dockerfile
 
+    export DOCKER_HOST=127.0.0.1
+
+    sudo docker-compose build
+    sudo docker-compose up
+
+
 EndRequisites;
 
 To Do List:
@@ -88,8 +106,8 @@ Bootstrap, Material    Y
 
 Passing tests          Y
 
-Docker setup           N
+Docker setup           Y
 
 Migrations             Y
 
-Use of Vue or React    Y
+Use of Vue or React    Y => Just in Laravel Login Module. I would like to mix this with GoogleMapsJs functions, but I need more time and the knowledge
