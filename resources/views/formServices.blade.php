@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <a href="{{ route('home')}}" class="btn btn-primary">Home</a>
-            <a href="{{ route('services.show')}}" class="btn btn-primary">Service</a>
+            <a href="{{ route('services.show')}}" class="btn btn-primary">Services</a>
             <br><br>
             <div class="card">
                 <div class="card-header">Form - New Services</div>
