@@ -61,7 +61,7 @@
                         </tbody>
                       </table>
                     @else
-                      __('No services registered!!!')
+                      {{ __('No services registered!!!') }}
                     @endif
                 </div>
             </div>
