@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Home - App Services Location')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 
-        <title>Laravel</title>
+        <title>{{ config('global.title') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -162,6 +162,6 @@
             infoWindow.open(map);
           }
       </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByngyNKdLMHJFL44kLfdQqiTpiHd-2fGA&libraries=places&&callback=initMap" async defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key={{ config('global.googleapisKey') }}&libraries=places&&callback=initMap" async defer></script>
     </body>
 </html>

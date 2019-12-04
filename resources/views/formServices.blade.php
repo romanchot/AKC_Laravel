@@ -1,5 +1,4 @@
 @extends('layouts.googleAutoComplete')
-@section('title', 'Services - App Services Location')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>{{ config('global.title') }}</title>
 
     <!-- Scripts
     <script src="{{ asset('js/app.js') }}" defer></script>-->
@@ -151,6 +151,6 @@
       }
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByngyNKdLMHJFL44kLfdQqiTpiHd-2fGA&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('global.googleapisKey') }}&libraries=places&callback=initAutocomplete" async defer></script>
 </body>
 </html>
